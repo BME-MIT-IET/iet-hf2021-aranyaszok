@@ -1,7 +1,7 @@
 package main.java.aranyaszok;
 
 /**
- * Ez az osztaly a medve tamadasaert felelos, hogy a egy jatekos és medve 
+ * Ez az osztaly a medve tamadasaert felelos, hogy a egy jatekos es medve 
  * egy mezon allnak akkor a jatek befejezodjon ososztalya az Effect
  * 
  * @author aranyaszok

@@ -16,7 +16,7 @@ public class Food extends Item implements Serializable {
 	}
 	
 	/**
-	 *Ez az etel használataert felelos 
+	 *Ez az etel hasznalataert felelos 
 	 *fuggveny. Az a player aki hasznalja ezt 
 	 *az itemet a teshoje eggyel noni fog
 	 *

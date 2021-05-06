@@ -25,8 +25,8 @@ public abstract class Building  implements Serializable{
 	
 	/**
 	 * Egy absztrakt fuggveny melyet majd a kulonbozo epuletek mind egyedileg valositanak meg
-	 * @param p : Player, akit sebez a függvény.
-	 * @param e : Effect, ami majd a játékos sebzi 
+	 * @param p : Player, akit sebez a fuggveny.
+	 * @param e : Effect, ami majd a jatekos sebzi 
 	 */
 	public abstract void Damage(Player p, Effect e);
 	
@@ -38,7 +38,7 @@ public abstract class Building  implements Serializable{
 	
 	
 	/**
-	 * Az epulet waterattributumát lehet allitani  
+	 * Az epulet waterattributumat lehet allitani  
 	 * 
 	 * @param w : Water az a water ahol a building allni fogg
 	 */
@@ -59,7 +59,7 @@ public abstract class Building  implements Serializable{
 	
 	/**
 	 * Egy uj epuletet rak arra a water
-	 * és a sajat referenciajat torli  
+	 * es a sajat referenciajat torli  
 	 * 
 	 * @param newB: Building, az uj epulet 
 	 */

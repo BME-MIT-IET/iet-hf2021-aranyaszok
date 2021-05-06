@@ -12,7 +12,7 @@ public class Ice extends Water {
 
 	/**
 	 * A Digging fugveny hivatott arra, hogy a jegrol a 
-	 * ho rétegeket eltavolitsuk vagy ha nincs rajta ho akkor
+	 * ho retegeket eltavolitsuk vagy ha nincs rajta ho akkor
 	 * egy targyat kias a jegbol
 	 * 
 	 * @param i - megadja hogy hany reteg havat tuntessen el a jeg feluleterol 
@@ -51,7 +51,7 @@ public class Ice extends Water {
 	 *Ezzel a foggvennyel lehet a jegtabla kapacitasarol
 	 *informaciot szerezni a researchernek
 	 *
-	 * @return a jégtábla kapacitásáról ad információt
+	 * @return a jegtabla kapacitasarol ad informaciot
 	 */
 	public int GetCapacity() {
 		return -1;

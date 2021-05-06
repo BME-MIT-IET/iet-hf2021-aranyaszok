@@ -20,7 +20,7 @@ public class DivingSuit extends Item {
 	/**
 	 * A Use fuggveny valositja meg a buvarruha hasznalati logikajat. Miutan egy jatekos meghivta a use-t, a safe attributomot igazra allitja
 	 * es a tratosaga csokenti 1-gyel 
-	 *@param p : Player, aki meghívja a búvárruha használatát.
+	 *@param p : Player, aki meghivja a buvarruha hasznalatat.
 	 */
 	public void Use(Player p) {
 		p.SetSafe(true);

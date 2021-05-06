@@ -19,7 +19,7 @@ public class ItemAction implements IMyAction{
 	private static final long serialVersionUID = -6575109123529790978L;
 
 	/**
-	 *Ha az item-re kattintunk és az a floating item, vagy az aktiv jatekos inventory-jaban levo item, akkor ez az item lesz a kivalasztott item
+	 *Ha az item-re kattintunk es az a floating item, vagy az aktiv jatekos inventory-jaban levo item, akkor ez az item lesz a kivalasztott item
 	 */
 	@Override
 	public void OnMouseCLick(View w) {

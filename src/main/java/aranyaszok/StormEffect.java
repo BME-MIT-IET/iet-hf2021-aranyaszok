@@ -2,7 +2,7 @@ package main.java.aranyaszok;
 
 
 /**
- * Egy olyan effekt mely a jatekost menekülesre osztokeli. Bekuldi a mezon allo epuletbe.
+ * Egy olyan effekt mely a jatekost menekulesre osztokeli. Bekuldi a mezon allo epuletbe.
  * @author aranyaszok
  */
 public class StormEffect extends Effect {
@@ -12,7 +12,7 @@ public class StormEffect extends Effect {
 
 
 	/**
-	 * Az effektus ami a játékosra hatással van. Az effektus hatasara a jatekos bemenekul az adott mezon allo epuletbe.
+	 * Az effektus ami a jatekosra hatassal van. Az effektus hatasara a jatekos bemenekul az adott mezon allo epuletbe.
 	 * 
 	 * @param p - Az effektel eltalalt jatekos
 	 */

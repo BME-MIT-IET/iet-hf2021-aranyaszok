@@ -49,7 +49,7 @@ public class Bear extends Steppable {
 
 	
 	/**
-	 * A toString() függvény definiálja felul 
+	 * A toString() fuggveny definialja felul 
 	 */
 	@Override
 	public String toString() {

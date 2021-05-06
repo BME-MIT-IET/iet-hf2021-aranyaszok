@@ -3,7 +3,7 @@ package main.java.aranyaszok;
 import java.io.Serializable;
 
 /**
- * A component osztály valósítja meg a flare gun részeit. Õsosztálya az item.
+ * A component osztaly valositja meg a flare gun reszeit. Ososztalya az item.
  * @author aranyaszok
  *
  */
@@ -16,7 +16,7 @@ public class Component extends Item {
 	}
 
 	/**
-	 * A Use fuggveny ami majd a player craft fuggvenyet hívja meg
+	 * A Use fuggveny ami majd a player craft fuggvenyet hivja meg
 	 * 
 	 *@param p :Player, aki majd megprobalja osszerakni.
 	 */
