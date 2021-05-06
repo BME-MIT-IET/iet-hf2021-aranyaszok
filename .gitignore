@@ -66,3 +66,4 @@ local.properties
 ##############################
 .vscode/
 .code-workspace
+.classpath
