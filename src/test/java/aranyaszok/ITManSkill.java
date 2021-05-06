@@ -16,7 +16,7 @@ class ITManSkill {
 	Palesz p = new Palesz(); 
 	
 	@BeforeEach
-	public void setUp() {	
+	public void setUp() {
 		player1.SetWater(ice);
 		player2.SetWater(ice);
 		ice.AddNeighbour(ice2);
