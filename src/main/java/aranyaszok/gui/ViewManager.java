@@ -67,7 +67,7 @@ public class ViewManager implements Serializable{
 	}
 	
 	/**A jatekk panel lekerdezesehez szolgalo fuggveny
-	 * @return A játéktér panelje
+	 * @return A jatekter panelje
 	 */
 	public GamePanel getGamePanel() {
 		return gamePanel;
