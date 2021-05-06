@@ -62,7 +62,7 @@ public abstract class Player extends Steppable {
 	
 	
 	/**
-	 * Az adott jatekos asas kepesseget valositja meg, alapvetoen ho eltakaritsssra hasznalhato, de ha mar tiszta a jegtabla amin állunk, akkor targyakat is ashatunk ki a vele a mezobol
+	 * Az adott jatekos asas kepesseget valositja meg, alapvetoen ho eltakaritsssra hasznalhato, de ha mar tiszta a jegtabla amin allunk, akkor targyakat is ashatunk ki a vele a mezobol
 	 */
 	public void Digging() {
 		this.GetWater().Digging(1);
@@ -132,7 +132,7 @@ public abstract class Player extends Steppable {
 	
 	/**
 	 * Egy targy eltavolitasa a jatekos sajat targyai kozol
-	 * @param i - A parameterul kapott targyat tavolítjuk el
+	 * @param i - A parameterul kapott targyat tavolitjuk el
 	 */
 	public void RemoveItem(Item i) {	
 		items.remove(i);

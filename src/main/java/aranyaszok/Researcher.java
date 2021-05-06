@@ -2,7 +2,7 @@ package main.java.aranyaszok;
 
 
 /**
- *A Researcher osztaly valositja meg az kutato karaktert a játékban. Ososztalya a Player.
+ *A Researcher osztaly valositja meg az kutato karaktert a jatekban. Ososztalya a Player.
  * @author aranyaszok
  *
  */
@@ -22,7 +22,7 @@ public class Researcher extends Player {
 	
 	
 	/**
-	 * A Skill fugveny a kutato kulonleges kepesseget valositja meg. Ennek a segitsegevel képes megvizsgalni egy adott terulet teherbirasa.
+	 * A Skill fugveny a kutato kulonleges kepesseget valositja meg. Ennek a segitsegevel kepes megvizsgalni egy adott terulet teherbirasa.
 	 */
 	public void Skill() {
 		this.GetFacing().setResearched(true);

@@ -2,7 +2,7 @@ package main.java.aranyaszok;
 
 
 /**
- * Egy olyan tárgy, mellyel a jatakos, ha hasznalja tobb havat tud letakaritani egy mezorol.
+ * Egy olyan targy, mellyel a jatakos, ha hasznalja tobb havat tud letakaritani egy mezorol.
  * @author aranyazok
  *
  */

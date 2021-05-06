@@ -3,7 +3,7 @@ package main.java.aranyaszok;
 import main.java.aranyaszok.gui.BuildingView;
 
 /**
- * Az Eskimo osztaly valositja meg az eszkimo karaktert a jatekban. Ososztálya a Player.
+ * Az Eskimo osztaly valositja meg az eszkimo karaktert a jatekban. Ososztalya a Player.
  * @author aranyaszok
  *
  */
@@ -24,7 +24,7 @@ public class Eskimo extends Player {
 	
 	/**
 	 * A Skill fugveny az eszkimo kulonleges kepesseget valositja meg. 
-	 * Ennek a segitsegevel képes iglut létrehozni, majd azt elhelyezni az adott teruleten.
+	 * Ennek a segitsegevel kepes iglut letrehozni, majd azt elhelyezni az adott teruleten.
 	 */
 	public void Skill() {
 		Building ig = new Iglu(this.GetWater());

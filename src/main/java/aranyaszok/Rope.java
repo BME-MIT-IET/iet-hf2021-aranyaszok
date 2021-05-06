@@ -2,7 +2,7 @@ package main.java.aranyaszok;
 
 
 /**
- * Egy olyan targy, melyet ha hasznalnak a szomszédos mezorol kimenti a jatekosokat.
+ * Egy olyan targy, melyet ha hasznalnak a szomszedos mezorol kimenti a jatekosokat.
  * @author aranyaszok
  */
 public class Rope extends Item {

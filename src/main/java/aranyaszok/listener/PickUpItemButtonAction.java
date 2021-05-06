@@ -16,7 +16,7 @@ public class PickUpItemButtonAction implements IMyAction{
 	private static final long serialVersionUID = 2666157211065063598L;
 
 	/**
-	 *A floating item-ek közül felveszi az itemet az aktiv player inventory-jaba
+	 *A floating item-ek kozul felveszi az itemet az aktiv player inventory-jaba
 	 */
 	@Override
 	public void OnMouseCLick(View w) {

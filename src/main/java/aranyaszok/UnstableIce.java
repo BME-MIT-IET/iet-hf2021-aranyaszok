@@ -3,7 +3,7 @@ package main.java.aranyaszok;
 import java.util.ArrayList;
 
 /**
- * Egy olyan mezõ melyen a játékosok nincsenek teljes biztonságban. Van egy teherbírása amit ha elér, akkor beszakad és a játékosok a vízbe kerülnek.
+ * Egy olyan mezo melyen a jatekosok nincsenek teljes biztonsagban. Van egy teherbirasa amit ha eler, akkor beszakad es a jatekosok a vizbe kerulnek.
  * 
  * @author aranyaszok
  */

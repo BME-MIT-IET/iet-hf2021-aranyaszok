@@ -3,7 +3,7 @@ package main.java.aranyaszok;
 import java.io.Serializable;
 
 /**
- * Az effect osztály valósítja meg az effekteknek az ososztalyat a jatekban. Ebbol az osztálybol származik az osszes effect.
+ * Az effect osztaly valositja meg az effekteknek az ososztalyat a jatekban. Ebbol az osztalybol szarmazik az osszes effect.
  * @author aranyaszok
  *
  */

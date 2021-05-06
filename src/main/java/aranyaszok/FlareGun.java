@@ -16,7 +16,7 @@ public class FlareGun {
 	
 	
 	/**
-	 * Vizsgálja hogy megvan-e a három 
+	 * Vizsgalja hogy megvan-e a harom 
 	 * darab componens. Es ha igen akkor meghivjuk a 
 	 * Win fuggvenyt a GameManagerbol
 	 * 
