@@ -1,4 +1,5 @@
 eclipse.preferences.version=1
+encoding//src/main/java=UTF-8
 encoding//src/main/java/aranyaszok/BearEffect.java=Cp1250
 encoding//src/main/java/aranyaszok/Building.java=Cp1250
 encoding//src/main/java/aranyaszok/Component.java=Cp1250
@@ -20,3 +21,4 @@ encoding//src/main/java/aranyaszok/Shovel.java=Cp1250
 encoding//src/main/java/aranyaszok/StormEffect.java=Cp1250
 encoding//src/main/java/aranyaszok/UnstableIce.java=Cp1250
 encoding//src/main/java/aranyaszok/Water.java=UTF-8
+encoding/<project>=UTF-8
