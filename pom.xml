@@ -14,8 +14,6 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>1.7</maven.compiler.source>
-    <maven.compiler.target>1.7</maven.compiler.target>
 	<sonar.projectKey>BME-MIT-IET_iet-hf2021-aranyaszok</sonar.projectKey>
 	<sonar.organization>bme-mit-iet-org</sonar.organization>
 	<sonar.host.url>https://sonarcloud.io</sonar.host.url>
