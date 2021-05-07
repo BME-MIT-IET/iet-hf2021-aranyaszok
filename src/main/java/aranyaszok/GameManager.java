@@ -60,7 +60,7 @@ public class GameManager implements Serializable {
 		chanceOfStormAverageStepRange = 5;
 		chanceOfStormLimit = 10;
 		vm = new ViewManager();
-		remainingRounds = 0;
+		remainingRounds = -1;
 		
 	}
 	
@@ -75,15 +75,6 @@ public class GameManager implements Serializable {
 		
 		this.Reset();
 		
-		try {
-			System.out.println("loadgame elott");
-			this.LoadGame(new File(System.getProperty("user.dir")+"/Resources/Maps/mapBase.data"));
-			System.out.println("loadgame utan");
-		} catch (Exception e) {
-			
-			e.printStackTrace();
-		}
-		
 		Random random = new Random();
 		
 		final int mapWidth = 7;
@@ -91,6 +82,67 @@ public class GameManager implements Serializable {
 		final int startingX = 0;
 		final int startingY = 0;
 		int indexOfStartingTile = mapHeight * startingX + startingY;
+		
+		//generate new map
+		//top left corner
+		int startFieldPostitionX = 50;
+		int startFieldPostitionY = 40;
+		
+		int positionShift = 128;
+		
+		for (int i = 0; i< mapWidth; i++) {
+			for (int j = 0; j< mapHeight; j++) {
+				Ice ice = new Ice();
+				FieldView fv = new FieldView(startFieldPostitionX + i*positionShift ,startFieldPostitionY + j * positionShift, 128, 128);
+				ice.AddView(fv);
+				fv.AddModel(ice);				
+			
+				vm.AddStaticViewToGamePanel(fv);				
+				
+				BuildingView bv = new BuildingView(startFieldPostitionX + i*positionShift + 34, startFieldPostitionY + j * positionShift + 20, 64,64);
+				ice.AddBuildingView(bv);
+				bv.AddModel(ice);
+
+				this.vm.AddStaticViewToGamePanel(fv);
+				this.vm.AddStaticViewToGamePanel(bv);
+				
+				this.map.add(ice);
+			}
+		}
+		
+		
+		for (int i = 0; i< mapWidth; i++) {
+			for (int j = 0; j< mapHeight; j++) {
+				
+				int index = i * mapHeight + j;
+				
+				//van felso szomszedja
+				if (j != 0) {
+					Water felsoSzomszed = this.map.get(index - 1);
+					this.map.get(index).AddNeighbour(felsoSzomszed);
+				}
+				
+				//van also szomszedja
+				if (j != mapHeight -1 ) {
+					Water alsoSzomszed = this.map.get(index + 1);
+					this.map.get(index).AddNeighbour(alsoSzomszed);
+				}
+				
+				//van bal szomszedja
+				if (i != 0) {
+					Water balSzomszed = this.map.get((i-1) * mapHeight + j);
+					this.map.get(index).AddNeighbour(balSzomszed);
+				}
+				
+				//van jobb szomszedja
+				if (i != mapWidth-1) {
+					Water jobbSzomszed = this.map.get((i+1) * mapHeight + j);
+					this.map.get(index).AddNeighbour(jobbSzomszed);
+				}
+				
+			}
+		}
+		
 		
 		final int numOfWaters = random.nextInt(4) + 3;
 		final int numOfUnstableIces = random.nextInt(5) + 10; 
@@ -277,10 +329,17 @@ public class GameManager implements Serializable {
 		
 		Water place = map.get(indexOfStartingTile);
 		
-		
-
 		for(int i = 0; i<players.size(); i++) {	
 			place.AddSteppable(players.get(i));
+		}
+		
+		vm.getGamePanel().setSelectedPlayer(eskimo.GetView());
+		vm.getGamePanel().setSelectedField(this.map.get(0).GetView());
+
+		for (int i = 0; i < this.map.size(); i++) {
+			FieldAction action = new FieldAction();
+			action.OnMouseCLick(this.map.get(i).GetView());
+			this.map.get(i).GetView().SetAction(action);
 		}
 		
 		Bear bear1 = new Bear();
@@ -348,6 +407,8 @@ public class GameManager implements Serializable {
 			GamePanel gamepanel = (GamePanel) temp.GetView().getPanel();
 			gamepanel.setSelectedPlayer(temp.GetView());
 			gamepanel.setSelectedField(temp.GetWater().GetView());
+			
+			
 			temp.GetWater().GetView().GetAction().OnMouseCLick(temp.GetWater().GetView());
 			
 			temp.SetRemainingWork(4);
@@ -516,8 +577,6 @@ public class GameManager implements Serializable {
 	 */
 	public void LoadGame(File gameFile) throws Exception {
 		
-		
-		
 		GameManager gm = null;
 		FileInputStream file = null;
 		gmObjectInputStream in = null;
@@ -528,14 +587,9 @@ public class GameManager implements Serializable {
 				file = new FileInputStream(gameFile.getAbsolutePath());
 	            in = new gmObjectInputStream(file); 
 	            
-	            if ( file == null || in == null) {
-	            	 System.out.println( "a file|in null volt" );
-	            }
-	           
-	            System.out.println(gameFile);
-	             
+	        	             
 	            gm = (GameManager)in.readObject(); 
-	            
+	             
 	        	this.map = gm.map;
 	        	this.players = gm.players;
 	        	this.allItems = gm.allItems;
@@ -547,9 +601,7 @@ public class GameManager implements Serializable {
 	     
 	        	this.vm.getGamePanel().Reset();
 	        	ArrayList<View> gmStaticViews = gm.vm.getGamePanel().getStaticViews();
-	        	
-	        	
-	        	
+	        	       	
 	        	for (int i = 0; i< gmStaticViews.size(); i++) {
 	        		
 	        		this.vm.AddStaticViewToGamePanel(gmStaticViews.get(i));
