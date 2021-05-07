@@ -35,13 +35,13 @@ Annak ellenőrzése, hogy egy játékos munkavégzésének tényéről, illetve 
 
 ### __Elvárt kimenet__
 
-A játékos mozgatása után a képe melletti hátralévő munkák számának eggyel csökkenie kellett.
+A játékos mozgatása után a képe melletti hátralévő munkák számának eggyel csökkennie kellett.
 
 Az `End Turn` megnyomása után az aktuálisan kiválasztott játékos képe meg kell, hogy változzon, méghozzá az `Other players`-nél a bal szélső játékos képére. 
 
 Ezután az `Energy` értéke ismét maximális kell, hogy legyen, illetve a menü felső, középső részén a hátralévő játékosok száma eggyel kell, hogy csökkenjen.
 
-Megjegyzés: Ha az `End Turn` gombot négyszer egymás után megnyomjuk, akkor a játékosok sorrendje átrendeződik, és a kör újraindul.
+_Megjegyzés: Ha az `End Turn` gombot négyszer egymás után megnyomjuk, akkor a játékosok sorrendje átrendeződik, és a kör újraindul._
 
 _A játékosok az alábbi módon vannak jelölve:_
 
@@ -60,7 +60,7 @@ Annak ellenőrzése, hogy egy játékos mozgatása megfelelően frissíti-e a n�
 ### __Teendők__
 1. Jelenleg minden játékos a bal-felső sarokban megjelenő jégtáblán áll. Mivel a játékosok mindig csak szomszédos mezőkre mozgathatóak, ezért kattintással jelölje ki az aktuális jégmező jobb vagy alsó szomszédját.
 2. Ellenőrizze, hogy biztosan nem olyan mezőt jelölt ki, amelyen már egy jegesmedve áll, ellenkező esetben válasszon ki egy másik mezőt.
-3. Az előzőekben már említett `Inventory` alatt találhatóak a funkciógombok, ezek közül válassza ki a `Move` felíratú gombot.   
+3. Az előzőekben már említett `Inventory` alatt találhatóak a funkciógombok, ezek közül válassza ki a `Move` feliratú gombot.   
 
 ### __Elvárt kimenet__
 
@@ -88,9 +88,9 @@ Annak ellenőrzése, hogy a játék bármely állapotában megvalósítható az 
 ### __Teendők__
 1. A `3 - Játékosok mozgásának megjelenítése` nevű tesztnél leírtakkal összhangban léptesse át mind a négy játékost bármely más mezőkre, akár különböző helyekre. A mozgatáskor válasszon olyan mezőket, ahol nem tartózkodik jegesmedve.
 - Minden játékossal négyszer léphet egy kör lefutása alatt, így összesen négyszer válthat mezőt egy játékossal közvetlenül egymás után.
-- A korábban már említett `Inventory` felírat felett láthatja az aktuálisan soron következő játékost.
-- Ha nem szeretne a játékosokkal többször egymás után lépni, akkor a már említett akció gombok alatt lévő `End Turn` felíratra nyomva léphet át a következő játékosra.
-2. A jobboldali narancssárga hátterű menü jobb legfelső sarkában található `Menu` felíratú gomb segítségével lépjen ki a főmenübe és kattintson a `SAVE` opcióra.
+- A korábban már említett `Inventory` felirat felett láthatja az aktuálisan soron következő játékost.
+- Ha nem szeretne a játékosokkal többször egymás után lépni, akkor a már említett akció gombok alatt lévő `End Turn` feliratra nyomva léphet át a következő játékosra.
+2. A jobboldali narancssárga hátterű menü jobb legfelső sarkában található `Menu` feliratú gomb segítségével lépjen ki a főmenübe és kattintson a `SAVE` opcióra.
 3. A megjelenő ablakban válassza ki a fájl mentésének helyét és a fájl nevét.
 4. A `Files of Type` mezőt hagyja az alapértelmezett értéken, ami `Ice diggers save`.
 5. Majd kattintson a megjelent ablakban a `Save` gombra.
