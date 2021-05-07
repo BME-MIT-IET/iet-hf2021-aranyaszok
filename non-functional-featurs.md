@@ -15,7 +15,7 @@
 - A játék nem tartalmaz az automatikus mentés, ezért ha a játékmentés nélkül bezárunk, vagy a játék összeomlik, akkor a játék menetünk teljesen elveszik.
 ## Stresszteszt
 
-## Teljesítménytesztek
+## Teljesítmény lemérés
 
 A teljesítmény tesztet a Junit Benchmark segítségével lett tesztelve. A teszt létrehoz egy GameManager objektumot és annak a ViewManager-rén meghívjuk a Update függvényt. A Benchmark a tesztet 20-szor futta le a tesztek.
 
