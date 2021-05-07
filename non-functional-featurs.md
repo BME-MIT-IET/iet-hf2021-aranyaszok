@@ -11,5 +11,8 @@
 - Nincs vizuális visszajelzés, amikor egy gombot lenyomunk
 - A fő menüben a Resume és Save gomb megjeleni a játék kezdetekor, de semmi funkcionális jelentősége nincs, mivel nem lehet őket használni.
 ![](pics/p3.png)
+- Lehetséges a mentéseket más típusú fájl ként is elmenteni de ezek nem lehet látni azonnal a Load gomb lenyomásával csak ha a fájl keresőben a kereset fájl típust átállítjuk all-ra.
+- A játék nem tartalmaz az automatikus mentés, ezért ha a játékmentés nélkül bezárunk, vagy a játék összeomlik, akkor a játék menetünk teljesen elveszik.
+## Stresszteszt
 
 ## Teljesítménytesztek
