@@ -282,3 +282,48 @@ A játékostól eltűnik a Rope. A Rope az eltalált játékosokat átmozgatja a
 ### Elvárt eredmény:
 
 A vízben lévő játékos átkerül arra a jégtáblára ahol a Rope-ot használó játékos áll.
+
+## **StormOnIceWithIglu Junit teszt**
+
+- **Leírás**\
+Vihar hatása jégen, amin Iglu van.
+- **Ellenőrzött funkcionalitás, várható hibahelyek**\
+A jégen, amin Iglu van, a játékosok testhője nem csökkenhet.
+
+### Lehetséges hibák:
+- A játékosok teshője csökken
+
+### Elvárt eredmény:
+
+A játékosok teshője nem változik.
+
+## **UseDivingSuit Junit teszt**
+
+- **Leírás**\
+Egy Player használja a DivingSuit-ot.
+- **Ellenőrzött funkcionalitás, várható hibahelyek**\
+Használat után a safe attribútum True kell hogy legyen. A DivingSuit-nak el kell tűnnie a játékos tárgykészletéből.
+
+### Lehetséges hibák:
+- A safe attribútum False értékű
+- A játékostól nem tűnt el a DivingSuit
+
+### Elvárt eredmény:
+
+A játékosok safe attribútum True kell legyen.
+
+## **UseDivingSuitWhitSafeAttributeOn Junit teszt**
+
+- **Leírás**\
+Egy Player használja a DivingSuit-ot úgy, hogy a safe attribútuma True.
+- **Ellenőrzött funkcionalitás, várható hibahelyek**\
+A safe attribútum továbbra is True kell hogy legyen. A DivingSuit-nak el kell tűnnie a játékos tárgykészletéből.
+
+### Lehetséges hibák:
+- A safe attribútum False-ra változott
+- A játékostól nem tűnt el a DivingSuit
+
+### Elvárt eredmény:
+
+A játékosok inventoryából eltünik a divingsuit.
+
