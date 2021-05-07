@@ -1,4 +1,4 @@
-# Nem-funkcionális jellemzők vizsgálata
+# Nem-funkcionális tesztek
 
 ## A játék felület használhatósága
 
