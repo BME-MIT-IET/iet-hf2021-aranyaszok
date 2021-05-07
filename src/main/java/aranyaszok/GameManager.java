@@ -95,14 +95,9 @@ public class GameManager implements Serializable {
 				Ice ice = new Ice();
 				FieldView fv = new FieldView(startFieldPostitionX + i*positionShift ,startFieldPostitionY + j * positionShift, 128, 128);
 				ice.AddView(fv);
-				fv.AddModel(ice);
-				
-				FieldAction fa= new FieldAction();
+				fv.AddModel(ice);				
 			
-				vm.AddStaticViewToGamePanel(fv);
-				//fa.OnMouseCLick(fv);
-				
-				//fv.SetAction(fa);
+				vm.AddStaticViewToGamePanel(fv);				
 				
 				BuildingView bv = new BuildingView(startFieldPostitionX + i*positionShift + 34, startFieldPostitionY + j * positionShift + 20, 64,64);
 				ice.AddBuildingView(bv);
