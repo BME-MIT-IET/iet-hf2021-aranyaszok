@@ -68,7 +68,11 @@ public abstract class View implements IDrawable, Serializable{
 		this.panel = panel;
 	}
 	
-	
+	@Override
+	public String toString() {
+		
+		return super.toString() + " " + this.posX + " " + this.posY + " " + this.width+  " " + this.height;
+	}
 	
 	/**
 	 *A parameterben kapott image-re rarajzolja magat a view

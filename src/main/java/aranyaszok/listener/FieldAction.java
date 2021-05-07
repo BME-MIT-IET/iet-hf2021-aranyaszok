@@ -32,6 +32,8 @@ public class FieldAction implements IMyAction{
 		Player playerModel = (Player)playerView.GetModel();
 		Water standingWater =  playerModel.GetWater();
 		
+		
+		
 		gamepanel.setSelectedItem(null);
 		gamepanel.DisableAllButtons();
 		
