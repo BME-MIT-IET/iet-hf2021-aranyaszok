@@ -15,6 +15,7 @@ public class Bear extends Steppable {
 	private static final long serialVersionUID = 6789894442987790615L;
 	
 	private BearEffect bearEffect;	
+	private Random r = new Random();
 	
 	/**
 	 * A Bear konstruktora feladata 
@@ -31,7 +32,6 @@ public class Bear extends Steppable {
 	 * hivatott megvalositani 
 	 */
 	public void Work() {
-		Random r = new Random();
 		int veletlen = r.nextInt(20);
 		this.ChangeDirection(veletlen);
 		this.Move(this.GetFacing());

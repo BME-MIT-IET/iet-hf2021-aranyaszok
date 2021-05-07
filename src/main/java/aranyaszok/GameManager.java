@@ -45,7 +45,7 @@ public class GameManager implements Serializable {
 	private boolean isActiveGame;
 	public ViewManager vm;
 	private int remainingRounds;
-	
+	private Random random = new Random();
 
 	public  GameManager() {
 		
@@ -75,7 +75,6 @@ public class GameManager implements Serializable {
 		
 		this.Reset();
 		
-		Random random = new Random();
 		
 		final int mapWidth = 7;
 		final int mapHeight = 5;
@@ -179,7 +178,7 @@ public class GameManager implements Serializable {
 				newTile = new UnstableIce(random.nextInt(3)+1);
 			}
 			
-			if (types[i] != 0) {
+			if (types[i] != 0 && newTile != null) {
 				newTile.AddView(map.get(i).GetView());
 				map.get(i).GetView().AddModel(newTile);
 				
@@ -285,9 +284,10 @@ public class GameManager implements Serializable {
 				place = map.get(index);
 				place.AddFrozenItem(item);
 				
-				item.AddView(itemView);
-				itemView.AddModel(item);
-				
+				if(item != null) {
+					item.AddView(itemView);
+					itemView.AddModel(item);
+				}
 				
 				allItems.add(item);
 				
@@ -376,7 +376,9 @@ public class GameManager implements Serializable {
 	/**
 	 * Uj jatek inditasakor general egy uj palyat es elinditja a jatekot
 	 */
-	public void Play() {
+	public void 
+    
+    Play() {
 		this.GenerateMap();
 		remainingRounds = players.size();
 		Swap();
@@ -426,11 +428,10 @@ public class GameManager implements Serializable {
 	 */
 	public void GenerateStorm() {
 
-		Random ran = new Random();
-		chanceOfStorm += ran.nextInt(chanceOfStormAverageStepRange*2) - chanceOfStormAverageStepRange + chanceOfStormAverageStep;
+		chanceOfStorm += random.nextInt(chanceOfStormAverageStepRange*2) - chanceOfStormAverageStepRange + chanceOfStormAverageStep;
 		
-		if(chanceOfStorm >= ran.nextInt(100 -  chanceOfStormLimit) +  chanceOfStormLimit) {			
-			int selectice = ran.nextInt(map.size());
+		if(chanceOfStorm >= random.nextInt(100 -  chanceOfStormLimit) +  chanceOfStormLimit) {			
+			int selectice = random.nextInt(map.size());
 			Water w = map.get(selectice);
 			w.StormCenter();
 			chanceOfStorm = 0;
@@ -496,11 +497,10 @@ public class GameManager implements Serializable {
 	 */
 	public void RelocateCrashedItems(List<Item> list) {
 		
-		Random r = new Random();
 		
 		while(list.size()!=0) {
 
-			int random = r.nextInt(map.size());
+			int random = this.random.nextInt(map.size());
 			
 			if(map.get(random).GetCapacity() != 0)
 			{
@@ -563,9 +563,7 @@ public class GameManager implements Serializable {
 	         try {
 	             if (out != null) out.close();
 	             if (file != null) file.close();
-	         } catch (IOException ex) { 
-	        	 throw new Exception("IOException is caught" + ex.getMessage()); 
-	         }
+	         } catch (IOException ex) {}
 		 }
 		
 	}
@@ -585,11 +583,12 @@ public class GameManager implements Serializable {
 	        {    
 	    
 				file = new FileInputStream(gameFile.getAbsolutePath());
+				System.out.println( "ide jutott" );
 	            in = new gmObjectInputStream(file); 
-	            
+
 	        	             
-	            gm = (GameManager)in.readObject(); 
-	             
+	          gm = (GameManager)in.readObject(); 
+
 	        	this.map = gm.map;
 	        	this.players = gm.players;
 	        	this.allItems = gm.allItems;
