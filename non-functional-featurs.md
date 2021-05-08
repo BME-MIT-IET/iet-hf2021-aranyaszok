@@ -1,4 +1,4 @@
-# Nem-funkcionális jellemzők vizsgálata
+# Nem-funkcionális tesztek
 
 ## A játék felület használhatósága
 
@@ -15,4 +15,11 @@
 - A játék nem tartalmaz az automatikus mentés, ezért ha a játékmentés nélkül bezárunk, vagy a játék összeomlik, akkor a játék menetünk teljesen elveszik.
 ## Stresszteszt
 
-## Teljesítménytesztek
+## Teljesítmény lemérés
+
+A teljesítmény tesztet a Junit Benchmark segítségével lett tesztelve. A teszt létrehoz egy GameManager objektumot és annak a ViewManager-rén meghívjuk a Update függvényt. A Benchmark a tesztet 20-szor futta le a tesztek.
+
+![](pics/p2.png)
+Itt látható a teszt eredménye
+
+Látható az eredményből hogy egy kör átlagosan 0.28 sec alatt futott le és a teszt futása során 70 alkalommal lett meghívva a Garbage Collector. A teszt teljes futási 5.59 sec volt és ebből 0.01 sec a warmup és a bench 5.58 sec-ig futott.
