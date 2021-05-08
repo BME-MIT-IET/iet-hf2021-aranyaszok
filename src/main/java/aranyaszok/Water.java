@@ -42,6 +42,22 @@ public class Water implements Serializable, IViewable {
 	}
 	
 	/**
+	 * Visszaadja a mezőn lévő játékosok litáját
+	 * Jelenleg CSAK teszteléshez használva
+	 */
+	public List<Player> GetPlayers() {
+		return players;
+	}
+	
+	/**
+	 * Visszaadja a mezőn lévő medvék litáját
+	 * Jelenleg CSAK teszteléshez használva
+	 */
+	public List<Bear> GetBears() {
+		return bears;
+	}
+	
+	/**
 	 * Egy mezo fel lett e mar terkepezve a kutato altal
 	 * @return Igaz, ha felterkepezett
 	 */
