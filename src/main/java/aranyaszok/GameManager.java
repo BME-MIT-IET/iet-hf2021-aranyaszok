@@ -64,6 +64,15 @@ public class GameManager implements Serializable {
 		
 	}
 	
+	
+	/**
+	 * Visszaadja a teljes map-ot
+	 * Jelenleg CSAK teszteléshez használva
+	 */
+	public List<Water> GetMap() {
+		return map;
+	}
+	
 
 	/**
 	 * Uj jatek inditasakor general egy uj palyat, amit a palya alap betoltesevel kezd, majd
