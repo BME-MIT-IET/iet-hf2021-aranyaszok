@@ -49,7 +49,6 @@ public class StepTests {
 		eskimo.Move(ice);
 		
 		assertEquals(ice, eskimo.GetWater());
-		assertEquals(true, eskimo.GetSafe());
 	}
 	
 	@Test

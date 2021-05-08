@@ -327,3 +327,9 @@ A safe attribútum továbbra is True kell hogy legyen. A DivingSuit-nak el kell 
 
 A játékosok inventoryából eltünik a divingsuit.
 
+# Egységtesztek lefedettsége
+
+![](pics\p4.png)
+Ezen a képen lehet látni a egységtesztek lefedetségének százalékos értékei
+
+Amint lehet látni, hogy az egységtesztek a kód nagy részét lefedi. A Main és a GameManager, amit nem lettek a tesztek során tesztelve és a kód nagyobb részét ez adja ezért lett az összeségben kicsi százalék a lefedettség.
