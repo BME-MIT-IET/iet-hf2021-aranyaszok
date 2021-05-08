@@ -29,6 +29,7 @@
 			<attribute name="m2e-apt" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="D:/D_Asztal/Ati/Egyetemi_iratok/IET/HF/HF2/iet-hf2021-aranyaszok/junit-benchmarks-0.7.2/junit-benchmarks-0.7.2.jar"/>
+
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
