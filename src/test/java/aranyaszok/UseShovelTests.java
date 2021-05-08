@@ -12,7 +12,7 @@ import main.java.aranyaszok.Item;
 import main.java.aranyaszok.Researcher;
 import main.java.aranyaszok.Shovel;
 
-public class UseShovel {
+public class UseShovelTests {
 
 	Researcher r1 = new Researcher();
 	Shovel s1 = new Shovel(1);

@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Test;
 import main.java.aranyaszok.Food;
 import main.java.aranyaszok.Researcher;
 
-public class UseFood {
+public class UseFoodTests {
 
 	Researcher r = new Researcher();
 	Food f = new Food();

@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 
 import main.java.aranyaszok.*;
 
-public class UseDivingSuit {
+public class UseDivingSuitTests {
 	Researcher researcher = new Researcher();
 	DivingSuit divingSuit = new DivingSuit();
 

@@ -11,7 +11,7 @@ import main.java.aranyaszok.Researcher;
 import main.java.aranyaszok.Rope;
 import main.java.aranyaszok.Water;
 
-public class UseRope {
+public class UseRopeTests {
 	
 	Researcher r1 = new Researcher();
 	Researcher r2 = new Researcher();

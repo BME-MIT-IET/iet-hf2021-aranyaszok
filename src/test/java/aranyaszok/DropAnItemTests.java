@@ -9,7 +9,7 @@ import main.java.aranyaszok.Component;
 import main.java.aranyaszok.Ice;
 import main.java.aranyaszok.Researcher;
 
-class PickUpAnItem {
+class DropAnItemTests {
 
 	Ice ice = new Ice();
 	Researcher player = new Researcher();
@@ -18,13 +18,13 @@ class PickUpAnItem {
 	@BeforeEach
 	public void setUp() {	
 		player.SetWater(ice);
-		ice.AddFloatingItem(c);				
+		player.AddItem(c);				
 	}
 
 	@Test
 	void test() {
-		player.PickUpItem(c);
-		assertEquals(c,player.GetItems().get(0));
+		player.DropItem(c);
+		assertEquals(0,player.GetItems().size());
 	}
 
 }

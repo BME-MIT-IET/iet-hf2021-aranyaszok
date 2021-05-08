@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 
 import main.java.aranyaszok.*;
 
-public class StormOnIceWithIglu {
+public class StormOnIceWithIgluTests {
 	Ice ice1;
 	Ice ice2;
 	Eskimo eskimo;

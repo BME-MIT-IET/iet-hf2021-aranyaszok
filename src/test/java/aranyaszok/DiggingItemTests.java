@@ -1,28 +1,27 @@
 package test.java.aranyaszok;
 
 import static org.junit.jupiter.api.Assertions.*;
-
 import org.junit.jupiter.api.*;
-import org.junit.jupiter.api.Test;
-
 import main.java.aranyaszok.*;
 
-class DiggingSnowLayer {
-
+class DiggingItemTests {
+	
 	Ice ice = new Ice();
 	Researcher player = new Researcher();
+	Component c = new Component();
 	
 	@BeforeEach
 	public void setUp() {		
-		ice.SetSnowLayers(2);
+		ice.SetSnowLayers(0);
 		player.SetWater(ice);
+		ice.AddFrozenItem(c);
 	}
-	
+
 	@Test
-	@DisplayName("DiggingSnowLayer")
-	void testDiggingSnow() {		
+	void test() {
 		player.Digging();
-		assertEquals(1,ice.GetSnowLayers(),"Csokkent");
+		assertEquals(c,ice.GetFloatingItems().get(0));
 	}
+		
 
 }

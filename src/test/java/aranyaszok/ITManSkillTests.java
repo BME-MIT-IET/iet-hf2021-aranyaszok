@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 
 import main.java.aranyaszok.*;
 
-class ITManSkill {
+class ITManSkillTests {
 
 	Ice ice = new Ice();
 	Ice ice2 = new Ice();
