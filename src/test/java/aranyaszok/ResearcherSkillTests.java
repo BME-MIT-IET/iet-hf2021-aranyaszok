@@ -1,25 +1,26 @@
 package test.java.aranyaszok;
 
 import static org.junit.jupiter.api.Assertions.*;
-import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import main.java.aranyaszok.*;
 
-class EskimoSkillOnIceWhitTent {
+class ResearcherSkillTests {
 	
+	Researcher player = new Researcher();
 	Ice ice = new Ice();
-	Tent tent = new Tent(ice);
-	Eskimo player = new Eskimo();
 	
 	@BeforeEach
 	public void setUp() {	
-		player.SetWater(ice);			
+		player.SetFacing(ice);				
 	}
+
 
 	@Test
 	void test() {
 		player.Skill();
-		assertNotEquals(tent, ice.GetBuilding());
+		assertEquals(true,ice.isResearched());
 	}
 
 }
