@@ -7,7 +7,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import jdk.internal.org.jline.utils.Log;
 import main.java.aranyaszok.*;
 import main.java.aranyaszok.gui.BuildingView;
 import main.java.aranyaszok.gui.FieldView;
