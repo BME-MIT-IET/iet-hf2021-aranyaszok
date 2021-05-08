@@ -27,7 +27,7 @@ Ha ezt a maximális számot kihasználjuk, abba a hibába ütközünk, hogy egy 
 **Tesztek**
 
 - Játék indítása 32 db medvével: `1,322s` **+1%**
-- Játék indítása 33+ db medvével: `StackOverflow`
+- Játék indítása 33+ db medvével: `java.lang.StackOverflowError`
 
 **Következtetések**
 
@@ -38,10 +38,17 @@ Ha ezt a maximális számot kihasználjuk, abba a hibába ütközünk, hogy egy 
 **Leírás**  
 
 Játékosok esetén nincs korlátozás arra, hányan állhatnak egy mezőn, ezért ezzel értelmesebb teszteket lehet végezni.  
+A játékosokat a teszt során csak olyan jégtáblákra helyeztük, amelyek kapacitása végtelen. Az olyan mezők is ki lettek hagyva, ahol medve van, ezzel elkerülve a játék elvesztését a teszt futása közben.
 
 **Tesztek**
 
+- Játék indítása jegenként 400 db játékossal: `1,418s` **+8,3%**
+- Játék indítása jegenként 400.000 db játékossal: `2,204s` **+68,4%**
+- Játék indítása jegenként 1.760.000 db játékossal: `4,444s` **+239,5%**
+- Játék indítása jegenként 1.800.000 db játékossal: `java.lang.OutOfMemoryError`
+
 **Következtetések**
+- 400.000-ig jól skálázódik a játék.
 
 ## Tárgyak számának növelése
 

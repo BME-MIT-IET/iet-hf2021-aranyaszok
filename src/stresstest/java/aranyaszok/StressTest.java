@@ -110,5 +110,53 @@ public class StressTest {
 		gm.vm.Update();
 	}
 	
-	
+	@Test
+	@DisplayName("Start the game with X number of Players on each Ice")
+	public void PlayersTest() {
+		gm = new GameManager();
+		gm.vm.Update();
+		gm.Reset();
+		gm.Play();
+
+		List<Water> waters = gm.GetMap();
+		
+		System.out.println(waters.size());
+		
+		for (int i = 0; i < waters.size(); i++) {
+			System.out.println(waters.size());
+			List<Bear> bears = waters.get(i).GetBears();
+			if (bears.size() == 0) {
+				if (waters.get(i).GetCapacity() == -1)
+					for (int j = 0; j < 440000; j++) {
+						ITMan itman = new ITMan();
+						SteppableView itmanview = new SteppableView(1000,1000,64,64);
+						itmanview.AddModel(itman);
+						itman.AddView(itmanview);
+						
+						Seal seal = new Seal();
+						SteppableView sealview = new SteppableView(1000,1000,64,64);
+						sealview.AddModel(seal);
+						seal.AddView(sealview);
+						
+						Researcher researcher = new Researcher();
+						SteppableView researcherview = new SteppableView(1000,1000,64,64);
+						researcherview.AddModel(researcher);
+						researcher.AddView(researcherview);
+						
+						Eskimo eskimo = new Eskimo();
+						SteppableView eskimoview = new SteppableView(1000,1000,64,64);
+						eskimoview.AddModel(eskimo);
+						eskimo.AddView(eskimoview);
+						
+						waters.get(i).AddSteppable(itman);
+						waters.get(i).AddSteppable(seal);
+						waters.get(i).AddSteppable(researcher);
+						waters.get(i).AddSteppable(eskimo);
+				}	
+			}
+		}
+		
+		gm.vm.ChangeSelectedPanel("game");
+		gm.vm.Update();
+	}	
 }
