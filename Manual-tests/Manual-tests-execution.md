@@ -5,8 +5,9 @@
 ### __A teszt végén előállt pályakép:__
  ![](Images/8.png)
 
+
+### __Megjegyzés:__
 ```
-Megjegyzés:
 A teszt helyesen lefutott, a pálya megfelelően inicializálódott.
 ```
 ***
@@ -19,8 +20,9 @@ A teszt helyesen lefutott, a pálya megfelelően inicializálódott.
 ### __A teszt végén előállt pályakép:__
  ![](Images/9.png)
 
-```
+
 ### __Megjegyzés:__
+```
 A teszt helyesen lefutott. A pályán, a játékos átléptetése után eggyel csökkent az `Energy` értéke, a hátralévő játékosok száma csökkent eggyel az `End Turn` megnyomása után, illetve a sorban következő játékos lett az aktuális, akinek a képe bekerült az előző játékos képének a helyére.
 ```
 ***
@@ -33,8 +35,9 @@ A teszt helyesen lefutott. A pályán, a játékos átléptetése után eggyel c
 ### __A teszt végén előállt pályakép:__
  ![](Images/11.png)
 
-```
+
 ### __Megjegyzés:__
+```
 A teszt helyesen lefutott. A pályán, a játékos átkerült a `Move` megnyomása után az új mezőre.
 ```
 ***
@@ -50,8 +53,9 @@ A teszt helyesen lefutott. A pályán, a játékos átkerült a `Move` megnyomá
 ### __Az elmentett játékfájl:__
  ![](Images/14.png)
 
-```
+
 ### __Megjegyzés:__
+```
 A teszt helyesen lefutott. A mentés után a kiexportált adatfájl megjelent a kiválasztott könyvtárban.
 ```
 ***
@@ -64,22 +68,107 @@ A teszt helyesen lefutott. A mentés után a kiexportált adatfájl megjelent a 
 ### __A visszatöltött játékállapot:__
  ![](Images/16.png)
 
-```
+
 ### __Megjegyzés:__
-A teszt helyesen lefutott. A visszatöltés után a lementett állapotot kaptuk vissza.
+
+```
+A teszt helyesen lefutott. A visszatöltés után pontosan a lementett állapotot kaptuk vissza.
 ```
 ***
 
 ## __6 - Jegesmedvék mozgása__
 
 ### __A játék visszatöltése:__
- ![](Images/15.png)
+ ![](Images/17.png)
 
 ### __A visszatöltött játékállapot:__
- ![](Images/16.png)
+ ![](Images/18.png)
 
-```
+
 ### __Megjegyzés:__
-A teszt helyesen lefutott. A visszatöltés után a lementett állapotot kaptuk vissza.
+```
+A teszt helyesen lefutott. A medvék a kör végén átléptek egy szomszédos mezőre.
+```
+***
+
+## __7 - Találkozás egy jegesmedvével__
+
+### __A teszt végén megjelent képernyő:__
+ ![](Images/19.png)
+
+
+### __Megjegyzés:__
+```
+A teszt helyesen lefutott. Az egyik medvéhez navigálva a játék végetért, vesztettünk.
+```
+***
+
+## __8 - Ásás__
+
+### __Játék képe a teszt előtt:__
+ ![](Images/20.png)
+
+### __Játék képe a teszt után:__
+ ![](Images/21.png)
+
+
+### __Megjegyzés:__
+```
+A teszt helyesen lefutott. A kiválasztott mezőn az ását követően minden fehér folt (hóréteg) eltűnt.
+```
+***
+
+## __9 - Eszközök kiásása__
+
+### __Játék képe a teszt után:__
+ ![](Images/22.png)
+
+
+### __Megjegyzés:__
+```
+A teszt helyesen lefutott. A kiválasztott mezőn az ását követően bekerült egy eszköz a jégtáblához tartozó Floating items-be.
+```
+***
+
+## __10 - Eszközök felvétele__
+
+### __Játék képe a teszt után:__
+ ![](Images/23.png)
+
+
+### __Megjegyzés:__
+```
+A teszt helyesen lefutott. A kiválasztott mezőn az ását követően megjelent eszközök átkerültek az aktuális játékos Inventory-jába.
+```
+***
+
+## __11 - Eszközök használata__
+
+### __Játék képe a teszt előtt:__
+ ![](Images/24.png)
+
+### __Játék képe a teszt után:__
+ ![](Images/25.png)
+
+
+### __Megjegyzés:__
+```
+A teszt helyesen lefutott. Az eszköz kijelölését és használatát követően, maga az eszköz kikerült a játékos Inventory-jából.
+```
+
+***
+
+## __12 - Eszköz lerakása__
+
+### __Játék képe a teszt előtt:__
+ ![](Images/26.png)
+
+### __Játék képe a teszt után:__
+ ![](Images/27.png)
+
+
+### __Megjegyzés:__
+```
+A teszt helyesen lefutott. Az eszköz kijelölését és lerakását követően az eszköz visszakerült a jégtáblára.
 ```
 ***

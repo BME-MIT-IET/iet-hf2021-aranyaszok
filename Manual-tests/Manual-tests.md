@@ -132,7 +132,7 @@ Annak ellenőrzése, hogy az egyes körök végén a jegesmedvék megváltoztatj
 
 ### __Elvárt kimenet__
 
-A felületen azt kell látnunk, hogy a jegesmedvék átkerültek eaz eredeti helyükhöz képest egy szomszédos jégtáblára.
+A felületen azt kell látnunk, hogy a jegesmedvék átkerültek az eredeti helyükhöz képest egy szomszédos jégtáblára.
 
 _A jegesmedvék az alábbi módon vannak jelölve:_
 
@@ -230,7 +230,7 @@ Annak ellenőrzése, hogy miután a felhasználó felvett egy eszközt, azt tudj
 ### __Teendők__
 1. Az aktuális játékos `Inventory`-jában kattintással jelölje ki a kiválasztott eszközt.
 2. Kattintson rá az akciógombok közül a `Use Item` gombra.
-- Egyes eszközök csak úgy használhatóak, ha ki van jelölve egy szomszédos jégtábla a pályán (pl.: kötél)
+- Egyes eszközök csak úgy használhatóak, ha ki van jelölve egy szomszédos jégtábla a pályán (pl.: kötél), illetve egyes eszközöket többször is lehet használni, mielőtt eltűnnének.
 
 
 ### __Elvárt kimenet__
